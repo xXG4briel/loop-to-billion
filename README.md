@@ -20,8 +20,8 @@ Este projeto visa comparar o tempo de execução de laços de repetição em 10 
 
 # 🚀 Instruções de Execução
 ```bash
-git clone https://github.com/seu-usuario/nome-do-repositorio.git
-cd nome-do-repositorio # entra no projeto
+git clone https://github.com/xXG4briel/loop-to-billion.git
+cd loop-to-billion # entra no projeto
 docker-compose up -d # monta o compose
 docker-compose logs # Verifica o log que cada container demorou para fazer a operação
 ```
