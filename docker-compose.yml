@@ -1,0 +1,82 @@
+version: '3'
+
+services:
+  python:
+    container_name: python
+    image: python:latest
+    volumes:
+      - ./scripts/python:/app
+    working_dir: /app
+    command: python billion.py
+
+  javascript:
+    container_name: javascript
+    image: node:latest
+    volumes:
+      - ./scripts/javascript:/app
+    working_dir: /app
+    command: node billion.js
+
+  java:
+    container_name: java
+    image: openjdk:latest
+    volumes:
+      - ./scripts/java:/app
+    working_dir: /app
+    command: sh -c "javac billion.java && java billion"
+
+  rust:
+    container_name: rust
+    image: rust:latest
+    volumes:
+      - ./scripts/rust:/app
+    working_dir: /app
+    command: sh -c "rustc billion.rs && ./billion"
+  
+  go:
+    container_name: go
+    image: golang:latest
+    volumes:
+      - ./scripts/go:/app
+    working_dir: /app
+    command: sh -c "go build -o billion billion.go && ./billion"
+
+  c:
+    container_name: c_
+    image: gcc:latest
+    volumes:
+      - ./scripts/c:/app
+    working_dir: /app
+    command: sh -c "gcc -o billion billion.c && ./billion"
+
+  cpp:
+    container_name: cpp
+    image: gcc:latest
+    volumes:
+      - ./scripts/cpp:/app
+    working_dir: /app
+    command: sh -c "g++ -o billion billion.cpp && ./billion"
+  
+  cs:
+    container_name: csharp
+    image: mcr.microsoft.com/dotnet/core/sdk:latest
+    volumes:
+      - ./scripts/cs:/app
+    working_dir: /app
+    command: dotnet run
+
+  php:
+    container_name: php
+    image: php:latest
+    volumes: 
+      - ./scripts/php:/app
+    working_dir: /app
+    command: php billion.php
+  
+  ruby:
+    container_name: ruby
+    image: ruby:latest
+    volumes: 
+      - ./scripts/ruby:/app
+    working_dir: /app
+    command: ruby billion.rb
