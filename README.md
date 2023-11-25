@@ -1,8 +1,6 @@
 # ⏳ Laços até 1 bilhão em 10 Linguagens diferentes
 
-```
 Este projeto visa comparar o tempo de execução de laços de repetição em 10 linguagens de programação diferentes. Cada linguagem implementa um laço que itera de 0 até 1 bilhão, e o projeto mede o tempo que cada linguagem leva para executar essa tarefa.
-```
 
 # 👨‍💻 Linguagens Utilizadas
 - C#
