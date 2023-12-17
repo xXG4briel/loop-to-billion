@@ -9,13 +9,21 @@ services:
     working_dir: /app
     command: python billion.py
 
-  javascript:
-    container_name: javascript
+  node:
+    container_name: javascript_node
     image: node:latest
     volumes:
       - ./scripts/javascript:/app
     working_dir: /app
     command: node billion.js
+
+  bun:
+    container_name: javascript_bun
+    image: oven/bun:latest
+    volumes:
+      - ./scripts/javascript:/app
+    working_dir: /app
+    command: bun billion.js
 
   java:
     container_name: java
