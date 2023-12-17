@@ -59,11 +59,11 @@ services:
   
   cs:
     container_name: csharp
-    image: mcr.microsoft.com/dotnet/core/sdk:latest
+    image: mcr.microsoft.com/dotnet/sdk:8.0
     volumes:
       - ./scripts/cs:/app
     working_dir: /app
-    command: dotnet run
+    command: dotnet run -c Release
 
   php:
     container_name: php
