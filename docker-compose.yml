@@ -39,7 +39,7 @@ services:
     volumes:
       - ./scripts/rust:/app
     working_dir: /app
-    command: sh -c "rustc billion.rs && ./billion"
+    command: sh -c "rustc -O billion.rs && ./billion"
   
   go:
     container_name: go
